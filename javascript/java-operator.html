@@ -5,19 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pengenalan Operator Pada JavaScript</title>
-  <style>
-    code {
-      width: 500px;
-      padding: 5px 20px;
-      background-color: lightgray;
-      display: block;
-    }
-
-    table thead th,
-    table tbody td {
-      padding: 2px 10px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -35,9 +24,9 @@
     </ul>
     <p>Berikut penjelasan tentang macam-macam operator yang ada di javascript</p>
     <!-- Arithmetic Operators -->
-    <h2>- Arithmetic Operators</h2>
+    <h2># Arithmetic Operators</h2>
     <p>Operator aritmatika digunakan untuk melakukan aritmatika pada angka:</p>
-    <table border="1" style="border-spacing: 0; border: 1px solid #b3b3b3;">
+    <table>
       <thead>
         <tr>
           <th>Operator</th>
@@ -49,84 +38,463 @@
         <tr>
           <td>+</td>
           <td>Penambahan</td>
-          <td>2+3 = <span id="tambah"></span></td>
+          <td>2 + 3 = <span id="a1">?</span></td>
         </tr>
         <tr>
           <td>-</td>
           <td>Pengurangan</td>
-          <td>2-3 = <span id="kurang"></span></td>
+          <td>2 - 3 = <span id="a2">?</span></td>
         </tr>
         <tr>
           <td>*</td>
           <td>Pengalian</td>
-          <td>2*3 = <span id="kali"></span></td>
+          <td>2 * 3 = <span id="a3">?</span></td>
         </tr>
         <tr>
           <td>**</td>
           <td>Pemangkatan</td>
-          <td>3**2 = <span id="pangkat"></span></td>
+          <td>3 ** 2 = <span id="a4">?</span></td>
         </tr>
         <tr>
           <td>/</td>
           <td>Pembagian</td>
-          <td>3/2 = <span id="bagi"></span></td>
+          <td>3 / 2 = <span id="a5">?</span></td>
         </tr>
         <tr>
           <td>%</td>
           <td>Modulus (sisa pembagian) </td>
-          <td>3%2 = <span id="modus"></span></td>
+          <td>3 % 2 = <span id="a6">?</span></td>
         </tr>
         <tr>
           <td>++</td>
           <td>Inkrimental</td>
-          <td><span id="inkri"></span></td>
+          <td>2 ++ = <span id="a7">?</span></td>
         </tr>
         <tr>
           <td>--</td>
           <td>Dekrimental</td>
-          <td><span id="dekri"></span></td>
+          <td>3 -- = <span id="a8">?</span></td>
         </tr>
       </tbody>
     </table>
     <p>Diketahui: x = 2, y = 3</p>
     <button type="button" onclick="operator()">Klik Saya</button>
-    <p>Contoh skrip kode untuk operator inkrimental dan dekrimental:</p>
+    <p>Contoh skrip kode:</p>
+    <pre>
     <code>
-      <p>var x = 5; <br>
-        x++; <br>
-        var z = x;</p>
-      <p>Maka hasilnya adalah 6, karena nilai x ditambah 1</p>
-      <p>var x = 5; <br>
-        x--; <br>
-        var z = x;</p>
-      <p>Maka hasilnya adalah 4, karena nilai x dikurang 1</p>
-    </code>
-    <!-- Assignment Operators -->
-    <h2>- Assignment Operators</h2>
-    <p>Operator Assignment memberikan nilai ke variabel Javascript.</p>
-  </div>
-  <script>
-    /* Arithmetic Operators */
-    function operator() {
-      var x = 2;
-      var y = 3;
-      var a = 2;
-      var b = 3;
-      a++;
-      b++;
-      c = a;
-      d = b;
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Arithmetic Operators */
+        function operator() {
+          var x = 2;
+          var y = 3;
+          var a = 2;
+          var b = 3;
+          a++;
+          b--;
+          c = a;
+          d = b;
 
-      document.getElementById("tambah").innerHTML = x + y;
-      document.getElementById("kurang").innerHTML = x - y;
-      document.getElementById("kali").innerHTML = x * y;
-      document.getElementById("pangkat").innerHTML = y ** 2;
-      document.getElementById("bagi").innerHTML = y / x;
-      document.getElementById("modus").innerHTML = y % x;
-      document.getElementById("inkri").innerHTML = c;
-      document.getElementById("dekri").innerHTML = d;
-    }
-  </script>
+          document.getElementById("a1").innerHTML = x + y;
+          document.getElementById("a2").innerHTML = x - y;
+          document.getElementById("a3").innerHTML = x * y;
+          document.getElementById("a4").innerHTML = y ** 2;
+          document.getElementById("a5").innerHTML = y / x;
+          document.getElementById("a6").innerHTML = y % x;
+          document.getElementById("a7").innerHTML = c;
+          document.getElementById("a8").innerHTML = d;
+        }
+      </script>
+    </code>
+    </pre>
+    <!-- Assignment Operators -->
+    <h2># Assignment Operators</h2>
+    <p>Operator Assignment berfungsi untuk memberikan nilai ke variabel Javascript.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Contoh</th>
+          <th>Sama Seperti</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">=</td>
+          <td>var a = 3</td>
+          <td rowspan="2"><span id="b1">?</span> = b</td>
+        </tr>
+        <tr>
+          <td>a = b</td>
+        </tr>
+        <tr>
+          <td rowspan="2">+=</td>
+          <td>var c = 3</td>
+          <td rowspan="2"><span id="b2">?</span> = c + 3</td>
+        </tr>
+        <tr>
+          <td>c += 3 </td>
+        </tr>
+        <tr>
+          <td rowspan="2">-=</td>
+          <td>var d = 2</td>
+          <td rowspan="2"><span id="b3">?</span> = d - 2</td>
+        </tr>
+        <tr>
+          <td>d -= 2</td>
+        </tr>
+        <tr>
+          <td rowspan="2">*=</td>
+          <td>var e = 4</td>
+          <td rowspan="2"><span id="b4">?</span> = e * 2</td>
+        </tr>
+        <tr>
+          <td>e *= 2</td>
+        </tr>
+        <tr>
+          <td rowspan="2">/=</td>
+          <td>var f = 2</td>
+          <td rowspan="2"><span id="b5">?</span> = f / 2</td>
+        </tr>
+        <tr>
+          <td>f /= 2</td>
+        </tr>
+        <tr>
+          <td rowspan="2">%=</td>
+          <td>var g = 2</td>
+          <td rowspan="2"><span id="b6">?</span> = g % 4</td>
+        </tr>
+        <tr>
+          <td>g %= 4</td>
+        </tr>
+        <tr>
+          <td rowspan="2">**=</td>
+          <td>var h = 3</td>
+          <td rowspan="2"><span id="b7">?</span> = h ** 2</td>
+        </tr>
+        <tr>
+          <td>h **= 2</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Diketahui: x = 3 </p>
+    <button type="button" onclick="tugas()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+      /* Assignment Operators */
+      function tugas() {
+        var a = 3;
+        document.getElementById("b1").innerHTML = a;
+
+        var c = 3;
+        c += 3;
+        document.getElementById("b2").innerHTML = c;
+
+        var d = 2;
+        d -= 2;
+        document.getElementById("b3").innerHTML = d;
+
+        var e = 4;
+        e *= 2;
+        document.getElementById("b4").innerHTML = e;
+
+        var f = 2;
+        f /= 2;
+        document.getElementById("b5").innerHTML = f;
+
+        var g = 2;
+        g %= 4;
+        document.getElementById("b6").innerHTML = g;
+
+        var h = 3;
+        h **= 2;
+        document.getElementById("b7").innerHTML = h;
+      }
+      </script>
+    </code></pre>
+    <!-- String Operators -->
+    <h2># String Operators</h2>
+    <p>Operator <b>"+"</b> juga dapat digunakan untuk menggabungkan string.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Variabel</th>
+          <th>Kalimat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>var txt1</td>
+          <td>"Saya suka"</td>
+        </tr>
+        <tr>
+          <td>var txt2</td>
+          <td>"tahu dan"</td>
+        </tr>
+        <tr>
+          <td>var txt3</td>
+          <td>"tempe!"</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <center>txt1 + txt2 + txt3</center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Maka jika digabungkan menjadi kalimat: <span id="c1" style="color: blue;">?</span></p>
+    <button type="button" onclick="kalimat()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* String Operators */
+        function kalimat() {
+          var txt1 = "Saya suka";
+          var txt2 = "tahu dan";
+          var txt3 = "tempe!";
+          var txt4 = txt1 + " " + txt2 + " " + txt3;
+
+          document.getElementById("c1").innerHTML = txt4;
+        }
+      </script>
+    </code></pre>
+    <p>Menambahkan dua angka, akan menghasilkan jumlah angka tersebut. <br> Tetapi menambahkan angka dan string akan
+      menghasilkan string:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Variabel</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>var x = 2 + 3</td>
+          <td><span id="c2" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>var y = 2 + "3"</td>
+          <td><span id="c3" style="color: goldenrod;">?</span></td>
+        </tr>
+        <tr>
+          <td>var z = 5 + " Kambing"</td>
+          <td><span id="c4" style="color: blueviolet;">?</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>~</p>
+    <button type="button" onclick="tambahString()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* String Operators */
+        function tambahString() {
+          var x = 2 + 3;
+          document.getElementById("c2").innerHTML = x;
+          
+          var y = 2 + "3";
+          document.getElementById("c3").innerHTML = y;
+
+          var z = 5 + "Kambing";
+          document.getElementById("c4").innerHTML = z;
+        }
+      </script>
+    </code></pre>
+    <!-- Comparison Operators -->
+    <h2># Comparison Operators</h2>
+    <p>Operator Perbandingan dan Logika digunakan untuk menguji <b style="color: blue;">benar</b> atau <b
+        style="color: red;">salah</b>.</p>
+    <p>Operator pembanding digunakan dalam pernyataan logis untuk menentukan persamaan atau perbedaan antara variabel
+      atau nilai.</p>
+    <p>Diketahui nilai x = 5, tabel di bawah ini menjelaskan operator perbandingan:</p>
+    <table class="w3-table-all notranslate">
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Deskripsi</th>
+          <th>Perbandingan</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">==</td>
+          <td rowspan="3">sama dengan</td>
+          <td>x == 8</td>
+          <td><span id="d1" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>x == 5</td>
+          <td><span id="d2" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>x == "5"</td>
+          <td><span id="d3" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td rowspan="2">===</td>
+          <td rowspan="2">nilai sama dan tipe sama</td>
+          <td>x === 5</td>
+          <td><span id="d4" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>x === "5"</td>
+          <td><span id="d5" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>!=</td>
+          <td>tidak sama dengan</td>
+          <td>x != 8</td>
+          <td><span id="d6" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td rowspan="3">!==</td>
+          <td rowspan="3">nilai tidak sama dan tidak sama jenis</td>
+          <td>x !== 5</td>
+          <td><span id="d7" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>x !== "5"</td>
+          <td><span id="d8" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>x !== 8</td>
+          <td><span id="d9" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>lebih besar dari</td>
+          <td>x &gt; 8</td>
+          <td><span id="d10" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>lebih kecil dari</td>
+          <td>x &lt; 8</td>
+          <td><span id="d11" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>&gt;=</td>
+          <td>lebih besar dari atau sama dengan</td>
+          <td>x &gt;= 8</td>
+          <td><span id="d12" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>&lt;=</td>
+          <td>lebih kecil dari atau sama dengan</td>
+          <td>x &lt;= 8</td>
+          <td><span id="d13" style="color: blue;">?</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>~</p>
+    <button type="button" onclick="bandingkan()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Comparison Operators */
+        function bandingkan() {
+          var x = 5;
+
+          document.getElementById("d1").innerHTML = (x == 8);
+          document.getElementById("d2").innerHTML = (x == 5);
+          document.getElementById("d3").innerHTML = (x == "5");
+          document.getElementById("d4").innerHTML = (x === 5);
+          document.getElementById("d5").innerHTML = (x === "5");
+          document.getElementById("d6").innerHTML = (x != 8);
+          document.getElementById("d7").innerHTML = (x !== 5);
+          document.getElementById("d8").innerHTML = (x !== "5");
+          document.getElementById("d9").innerHTML = (x !== 8);
+          document.getElementById("d10").innerHTML = (x > 8);
+          document.getElementById("d11").innerHTML = (x < 8);
+          document.getElementById("d12").innerHTML = (x >= 8);
+          document.getElementById("d13").innerHTML = (x <= 8);
+        }
+      </script>
+    </code></pre>
+    <!-- Logical Operators -->
+    <h2># Logical Operators</h2>
+    <p>Operator logis digunakan untuk menentukan logika antara variabel atau nilai.</p>
+    <p>Diketahui nilai x = 6 dan y = 3, tabel di bawah ini menjelaskan operator logis:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Deskripsi</th>
+          <th>Contoh</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">&&</td>
+          <td rowspan="2">and</td>
+          <td>(x &lt; 10 && y &gt; 1)</td>
+          <td><span id="d14" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>(x &lt; 10 && y &lt; 1)</td>
+          <td><span id="d15" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td rowspan="4">||</td>
+          <td rowspan="4">or</td>
+          <td>(x == 5 || y == 5)</td>
+          <td><span id="d16" style="color: red;">?</span></td>
+        </tr>
+        <tr>
+          <td>(x == 6 || y == 0)</td>
+          <td><span id="d17" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>(x == 0 || y == 3)</td>
+          <td><span id="d18" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>(x == 6 || y == 3)</td>
+          <td><span id="d19" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td rowspan="2">!</td>
+          <td rowspan="2">not</td>
+          <td>!(x === y)</td>
+          <td><span id="d20" style="color: blue;">?</span></td>
+        </tr>
+        <tr>
+          <td>!(x &gt; y)</td>
+          <td><span id="d21" style="color: red;">?</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>~</p>
+    <button type="button" onclick="logika()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Comparison Operators */
+        function logika() {
+          var x = 6;
+          var y = 3;
+
+          document.getElementById("d14").innerHTML = (x < 10 && y > 1);
+          document.getElementById("d15").innerHTML = (x < 10 && y < 1);
+          document.getElementById("d16").innerHTML = (x == 5 || y == 5);
+          document.getElementById("d17").innerHTML = (x == 6 || y == 0);
+          document.getElementById("d18").innerHTML = (x == 0 || y == 3);
+          document.getElementById("d19").innerHTML = (x == 6 || y == 3);
+          document.getElementById("d20").innerHTML = !(x === y);
+          document.getElementById("d21").innerHTML = !(x > y);
+        }
+      </script>
+    </code></pre>
+  </div>
 </body>
 
 </html>
