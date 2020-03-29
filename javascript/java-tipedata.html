@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Variabel & Tipe Data Pada JavaScript</title>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Variabel & Tipe Data</h1>
+    <ul>
+      <li>String</li>
+      <li>Boolean</li>
+      <li>Number</li>
+      <li>Array</li>
+      <li>Object</li>
+    </ul>
+    <!-- Tipe Data String -->
+    <h2>- Tipe data string</h2>
+    <p>Saya suka mobil avanza!</p>
+    <p>Merek dari mobil avanza adalah <span id="merek"></span></p>
+    <button type="button" onclick="tipeString()">Klik Saya</button>
+    <!-- Tipe Data Boolean -->
+    <h2>- Tipe data boolean</h2>
+    <p>Diketahui x tidak sama dengan y, jika x sama dengan z</p>
+    <p>Maka perbandingan x = y adalah [ <span id="false" style="color: red;"></span> ]</p>
+    <p>Maka perbandingan x = y adalah [ <span id="true" style="color: blue;"></span> ]</p>
+    <button type="button" onclick="tipeBoolean()">Klik Saya</button>
+    <!-- Tipe Data Number -->
+    <h2>- Tipe data number</h2>
+    <p>Jika var x = 2 dan var y = 5</p>
+    <p>Maka jumlah x + y = <span id="variable"> </span></p>
+    <button type="button" onclick="tipeNumber()">Klik Saya</button>
+    <!-- Tipe Data Array -->
+    <h2>- Tipe data array</h2>
+    <p>Sebutkan nama-nama ikan!</p>
+    <p>Nama-nama ikan yang saya ketahui adalah [ <span id="larik"> </span> ]</p>
+    <p>Di kolom ke ketiga ada ikan [ <span id="ketiga"> </span> ]</p>
+    <p>Di kolom ke pertama ada ikan [ <span id="pertama"> </span> ]</p>
+    <button type="button" onclick="tipeArray()">Klik Saya</button>
+    <!-- Tipe Data Object -->
+    <h2>- Tipe data object</h2>
+    <p>Diketahu biodata Usamah</p>
+    <p>Nama lengkap: [ <span id="nama" style="color: blue;"> </span> ]</p>
+    <p>Tanggal lahir: [ <span id="lahir" style="color: yellowgreen;"> </span> ]</p>
+    <p>Jenis kelamin [ <span id="kelamin" style="color: red;"> </span> ]</p>
+    <button type="button" onclick="tipeObject()">Klik Saya</button>
+  </div>
+  <script>
+    function tipeString() {
+      var merek = "\' Toyota \'";
+      document.getElementById("merek").innerHTML = merek;
+    }
+
+    function tipeBoolean() {
+      var x = 5;
+      var y = 6;
+      var z = 5;
+      document.getElementById("false").innerHTML = (x == y);
+      document.getElementById("true").innerHTML = (x == z);
+    }
+
+    function tipeNumber() {
+      var x = 2;
+      var y = 5;
+      var z = x + y;
+      document.getElementById("variable").innerHTML = z;
+    }
+
+    function tipeArray() {
+      var ikan = ["Hiu", " Paus", " Tongkol", " Lele"];
+      document.getElementById("larik").innerHTML = ikan;
+      document.getElementById("ketiga").innerHTML = ikan[2];
+      document.getElementById("pertama").innerHTML = ikan[0];
+    }
+
+    function tipeObject() {
+      var usamah = {
+        nama: "Usamah Thaha Nuruzzaman",
+        lahir: "24 Desember 2019",
+        kelamin: "Laki-laki"
+      }
+      document.getElementById("nama").innerHTML = usamah.nama;
+      document.getElementById("lahir").innerHTML = usamah.lahir;
+      document.getElementById("kelamin").innerHTML = usamah.kelamin;
+    }
+  </script>
+</body>
+
+</html>

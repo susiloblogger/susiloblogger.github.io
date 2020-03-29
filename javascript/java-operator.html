@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Operator Pada JavaScript</title>
+  <style>
+    code {
+      width: 500px;
+      padding: 5px 20px;
+      background-color: lightgray;
+      display: block;
+    }
+
+    table thead th,
+    table tbody td {
+      padding: 2px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Pengenalan Operator</h1>
+    <p>Operator adalah simbol-simbol khusus yang digunakan untuk mengoperasikan suatu nilai data atau operasi aritmatika
+    </p>
+    <p>Operator dalam javascript terdiri dari:</p>
+    <ul>
+      <li>Arithmetic Operators</li>
+      <li>Assignment Operators</li>
+      <li>String Operators</li>
+      <li>Comparison Operators</li>
+      <li>Logical Operators</li>
+    </ul>
+    <p>Berikut penjelasan tentang macam-macam operator yang ada di javascript</p>
+    <!-- Arithmetic Operators -->
+    <h2>- Arithmetic Operators</h2>
+    <p>Operator aritmatika digunakan untuk melakukan aritmatika pada angka:</p>
+    <table border="1" style="border-spacing: 0; border: 1px solid #b3b3b3;">
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Deskripsi</th>
+          <th>Contoh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>+</td>
+          <td>Penambahan</td>
+          <td>2+3 = <span id="tambah"></span></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Pengurangan</td>
+          <td>2-3 = <span id="kurang"></span></td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Pengalian</td>
+          <td>2*3 = <span id="kali"></span></td>
+        </tr>
+        <tr>
+          <td>**</td>
+          <td>Pemangkatan</td>
+          <td>3**2 = <span id="pangkat"></span></td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Pembagian</td>
+          <td>3/2 = <span id="bagi"></span></td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Modulus (sisa pembagian) </td>
+          <td>3%2 = <span id="modus"></span></td>
+        </tr>
+        <tr>
+          <td>++</td>
+          <td>Inkrimental</td>
+          <td><span id="inkri"></span></td>
+        </tr>
+        <tr>
+          <td>--</td>
+          <td>Dekrimental</td>
+          <td><span id="dekri"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Diketahui: x = 2, y = 3</p>
+    <button type="button" onclick="operator()">Klik Saya</button>
+    <p>Contoh skrip kode untuk operator inkrimental dan dekrimental:</p>
+    <code>
+      <p>var x = 5; <br>
+        x++; <br>
+        var z = x;</p>
+      <p>Maka hasilnya adalah 6, karena nilai x ditambah 1</p>
+      <p>var x = 5; <br>
+        x--; <br>
+        var z = x;</p>
+      <p>Maka hasilnya adalah 4, karena nilai x dikurang 1</p>
+    </code>
+    <!-- Assignment Operators -->
+    <h2>- Assignment Operators</h2>
+    <p>Operator Assignment memberikan nilai ke variabel Javascript.</p>
+  </div>
+  <script>
+    /* Arithmetic Operators */
+    function operator() {
+      var x = 2;
+      var y = 3;
+      var a = 2;
+      var b = 3;
+      a++;
+      b++;
+      c = a;
+      d = b;
+
+      document.getElementById("tambah").innerHTML = x + y;
+      document.getElementById("kurang").innerHTML = x - y;
+      document.getElementById("kali").innerHTML = x * y;
+      document.getElementById("pangkat").innerHTML = y ** 2;
+      document.getElementById("bagi").innerHTML = y / x;
+      document.getElementById("modus").innerHTML = y % x;
+      document.getElementById("inkri").innerHTML = c;
+      document.getElementById("dekri").innerHTML = d;
+    }
+  </script>
+</body>
+
+</html>
