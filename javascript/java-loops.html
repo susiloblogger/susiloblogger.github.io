@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Pengulangan Pada JavaScript</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div id="content">
+    <h1>Pengulangan (Loop)</h1>
+    <p>Dengan metode pengulangan blok kode dapat di eksekusi beberapa kali.</p>
+    <p>Pengulangan berguna, jika ingin menjalankan kode yang sama berulang kali, walaupun dengan nilai yang berbeda.
+    </p>
+    <p><span id="contoh">[ ? ]</span></p>
+    <button type="button" onclick="contoh()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Tipe Data String */
+        function contoh() {
+          var text = "";
+          var i;
+
+          for (i = 0; i < 5; i++) {
+            text += "Saya adalah bilangan ke: " + i + "<br>";
+          }
+
+          document.getElementById("contoh").innerHTML = text;
+        }
+      </script>
+    </code></pre>
+    <p>Beberapa jenis pengulangan yang ada pada javascript, yaitu:</p>
+    <ul>
+      <li><b>for</b> - Pengulangan melalui blok kode beberapa kali.</li>
+      <li><b>for/in</b> - Pengulangan melalui properti dari suatu objek.</li>
+      <li><b>for/of</b> - Pengulangan melalui nilai-nilai objek yang dapat diulang.</li>
+      <li><b>while</b> - Pengulangan melalui blok kode dengan kondisi yang ditentukan benar.</li>
+      <li><b>do/while</b> - Metodenya sama dengan "while".</li>
+    </ul>
+    <p>Berikut penjelasan tentang jenis-jenis pengulangan:</p>
+    <!-- Pengulangan For -->
+    <h2># Pengulangan For</h2>
+    <p>Syntax untuk menggunakan pengulangan <b>For</b></p>
+    <pre><code>
+      <span style="font-style: italic;">for (pernyataan 1; pernyataan 2; pernyataan 3) {
+    // blok kode yang akan di eksekusi
+    }</span>
+    </code></pre>
+    <p>Keterangan:</p>
+    <ul>
+      <li><b>Statement 1</b> - dieksekusi (satu kali) sebelum eksekusi blok kode.</li>
+      <li><b>Statement 2</b> - mendefinisikan kondisi untuk mengeksekusi blok kode.</li>
+      <li><b>Statement 3</b> - dieksekusi (setiap kali) setelah blok kode dieksekusi.</li>
+    </ul>
+    <p>Berikut contoh penggunaan pengulangan <b>For</b> yang di ulang sebanyak 3 kali.</p>
+    <p><span id="a1">[ ? ]</span></p>
+    <button type="button" onclick="conSatu()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengulangan For */
+        function conSatu() {
+          var text = "";
+          var i;
+
+          for (i = 0; i < 3; i++) {
+            text += "Saya adalah bilangan ke: [" + i + "]<br>";
+          }
+
+          document.getElementById("a1").innerHTML = text;
+        }
+      </script>
+    </code></pre>
+    <p>Dari contoh di atas maka dapat diketahui:</p>
+    <ul>
+      <li>Pernyataan 1: menetapkan variabel sebelum loop dimulai (var i = 0).</li>
+      <li>Pernyataan 2: mendefinisikan kondisi untuk menjalankan loop (dimana i diulang kurang dari 3 kali).</li>
+      <li>Pernyataan 3: meningkatkan nilai (i ++) setiap kali blok kode dalam loop telah dieksekusi.</li>
+    </ul>
+    <!-- Pengulangan For/In -->
+    <h2># Pengulangan For/In</h2>
+    <p>Metode pengulangan <b>For/In</b> digunakan untuk melakukan pengulangan properti dari suatu objek:</p>
+    <p>Diketahui objek biodata "Jhon Doe" dengan properti nama: "Jhon Doe", tanggal lahir: "24 Des 2019", jenis kelamin:
+      "Laki-laki"</p>
+    <p>Maka, jika semua properti tersebut dilakukan pengulangan hasilnya sebagai berikut:</p>
+    <p>[ <span id="a2" style="color: blueviolet;">?</span> ]</p>
+    <button type="button" onclick="conDua()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengulangan For/In */
+        function conDua() {
+          var txt = "";
+          var person = {nama:"John Doe,", tanggal:"24 Des 2019,", kelamin:"Laki-laki"}; 
+          var x;
+          for (x in person) {
+            txt += person[x] + " ";
+          }
+
+          document.getElementById("a2").innerHTML = txt;
+        }
+      </script>
+    </code></pre>
+    <!-- Pengulangan For/Of -->
+    <h2># Pengulangan For/Of</h2>
+    <p>Metode pengulangan <b>For/Of</b> digunakan untuk melakukan pengulangan nilai-nilai objek yang dapat diulang</p>
+    <p>Syntax untuk menggunakan pengulangannya sebagai berikut:</p>
+    <pre><code>
+      <span style="font-style: italic;">for (variabel of iterasi) {
+    // blok kode yang akan di eksekusi
+    }</span>
+    </code></pre>
+    <ul>
+      <li>Variabel - Untuk setiap pengulangan, nilai properti berikutnya diberikan ke variabel. Variabel dapat
+        dideklarasikan dengan menggunakan const, let, atau var.</li>
+      <li>Iterasi - Objek yang memiliki properti dapat diulang.</li>
+    </ul>
+    <p>Berikut contoh penggunaan pengulangan <b>For/Of</b> pada array.</p>
+    <p><span id="a3" style="color: blueviolet;">[ ? ]</span></p>
+    <button type="button" onclick="conTiga()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengulangan For/In */
+        function conTiga() {
+          var cars = ['Toyota', 'Volvo', 'Honda', 'Suzuki'];
+          var text = "";
+      
+          for (var x of cars) {
+            text += ("[ " + x + " ]");
+          }
+
+          document.getElementById("a3").innerHTML = text;
+        }
+      </script>
+    </code></pre>
+    <!-- Pengulangan While -->
+    <h2># Pengulangan While</h2>
+    <p>Metode pengulangan <b>While</b> blok kode akan dijalankan secara repetitif selama kondisi yang ditentukan benar.
+    </p>
+    <p>Syntax untuk menggunakan pengulangan <b>While</b></p>
+    <pre><code>
+      <span style="font-style: italic;">while (kondisi) {
+      // blok kode yang akan di eksekusi
+      }</span>
+    </code></pre>
+    <p>Dalam contoh berikut, metode pengulangan akan berjalan berulang-ulang, selama variabel "i" kurang dari 5:</p>
+    <p><span id="a4" style="color: goldenrod;">[ ? ]</span></p>
+    <button type="button" onclick="conEmpat()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengulangan For/In */
+        function conEmpat() {
+          var text = "";
+          var i = 0;
+
+          while (i < 5) {
+            text += "Saya adalah bilangan ke: [" + i + "]<br>";
+            i++;
+          }
+          document.getElementById("a4").innerHTML = text;
+        }
+      </script>
+    </code></pre>
+    <!-- Pengulangan Do/While -->
+    <h2># Pengulangan Do/While</h2>
+    <p>Metode pengulangan <b>Do/while</b> secara pemrosesan skrip kebalikan dari <b>While</b>. Metode pengulangan ini
+      akan mengeksekusi blok kode terlebih dahulu, kemudian akan mengulangnya secara repetitif selama kondisi yang
+      ditentukan benar.</p>
+    <p>Syntax untuk menggunakan pengulangan <b>Do/While</b></p>
+    <pre><code>
+      <span style="font-style: italic;">do {
+    // blok kode yang akan di eksekusi
+    }
+    while (kondisi);</span>
+    </code></pre>
+    <p>Contoh di bawah ini menggunakan metode pengulangan <b>Do/While</b>. Pengulangan akan selalu dieksekusi setidaknya
+      sekali, walaupun kondisinya salah, karena blok kode dieksekusi lebih dulu sebelum kondisi diuji:</p>
+    <p><span id="a5" style="color: goldenrod;">[ ? ]</span></p>
+    <button type="button" onclick="conLima()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengulangan For/In */
+        function conLima() {
+          var text = ""
+          var i = 0;
+
+          do {
+            text += "Saya adalah bilangan ke: [" + i + "]<br>";
+            i++;
+          }
+          while (i < 3);
+
+          document.getElementById("a5").innerHTML = text;
+        }
+      </script>
+    </code></pre>
+  </div>
+</body>
+
+</html>
