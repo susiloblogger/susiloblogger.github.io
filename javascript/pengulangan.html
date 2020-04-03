@@ -33,7 +33,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="content">
-    <h1>Pengulangan (Loop)</h1>
+    <h1><a href="/">Beranda</a> / Pengulangan (Loop)</h1>
     <p>Dengan metode pengulangan blok kode dapat di eksekusi beberapa kali.</p>
     <p>Pengulangan berguna, jika ingin menjalankan kode yang sama berulang kali, walaupun dengan nilai yang berbeda.
     </p>
@@ -53,20 +53,21 @@
           }
 
           document.getElementById("contoh").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
     <p>Beberapa jenis pengulangan yang ada pada javascript, yaitu:</p>
     <ul>
-      <li><b>for</b> - Pengulangan melalui blok kode beberapa kali.</li>
-      <li><b>for/in</b> - Pengulangan melalui properti dari suatu objek.</li>
-      <li><b>for/of</b> - Pengulangan melalui nilai-nilai objek yang dapat diulang.</li>
-      <li><b>while</b> - Pengulangan melalui blok kode dengan kondisi yang ditentukan benar.</li>
-      <li><b>do/while</b> - Metodenya sama dengan "while".</li>
+      <li><a href="#bag1">Pengulangan <b>For..</b></a></li>
+      <li><a href="#bag2">Pengulangan <b>For.. In..</b></a></li>
+      <li><a href="#bag3">Pengulangan <b>For.. Of..</b></a></li>
+      <li><a href="#bag4">Pengulangan <b>While..</b></a></li>
+      <li><a href="#bag5">Pengulangan <b>Do.. While..</a></b></li>
     </ul>
     <p>Berikut penjelasan tentang jenis-jenis pengulangan:</p>
     <!-- Pengulangan For -->
-    <h2># Pengulangan For</h2>
+    <h2 id="bag1"><a href="#">#</a> Pengulangan For..</h2>
     <p>Syntax untuk menggunakan pengulangan <b>For</b></p>
     <pre><code>
       <span style="font-style: italic;">for (pernyataan 1; pernyataan 2; pernyataan 3) {
@@ -96,6 +97,7 @@
           }
 
           document.getElementById("a1").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
@@ -106,7 +108,7 @@
       <li>Pernyataan 3: meningkatkan nilai (i ++) setiap kali blok kode dalam loop telah dieksekusi.</li>
     </ul>
     <!-- Pengulangan For/In -->
-    <h2># Pengulangan For/In</h2>
+    <h2 id="bag2"><a href="#">#</a> Pengulangan For.. In..</h2>
     <p>Metode pengulangan <b>For/In</b> digunakan untuk melakukan pengulangan properti dari suatu objek:</p>
     <p>Diketahui objek biodata "Jhon Doe" dengan properti nama: "Jhon Doe", tanggal lahir: "24 Des 2019", jenis kelamin:
       "Laki-laki"</p>
@@ -119,19 +121,20 @@
       <script>
         /* Pengulangan For/In */
         function conDua() {
-          var txt = "";
+          var text = "";
           var person = {nama:"John Doe,", tanggal:"24 Des 2019,", kelamin:"Laki-laki"}; 
           var x;
           for (x in person) {
-            txt += person[x] + " ";
+            text += person[x] + " ";
           }
 
-          document.getElementById("a2").innerHTML = txt;
+          document.getElementById("a2").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
     <!-- Pengulangan For/Of -->
-    <h2># Pengulangan For/Of</h2>
+    <h2 id="bag3"><a href="#">#</a> Pengulangan For.. Of..</h2>
     <p>Metode pengulangan <b>For/Of</b> digunakan untuk melakukan pengulangan nilai-nilai objek yang dapat diulang</p>
     <p>Syntax untuk menggunakan pengulangannya sebagai berikut:</p>
     <pre><code>
@@ -161,11 +164,12 @@
           }
 
           document.getElementById("a3").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
     <!-- Pengulangan While -->
-    <h2># Pengulangan While</h2>
+    <h2 id="bag4"><a href="#">#</a> Pengulangan While..</h2>
     <p>Metode pengulangan <b>While</b> blok kode akan dijalankan secara repetitif selama kondisi yang ditentukan benar.
     </p>
     <p>Syntax untuk menggunakan pengulangan <b>While</b></p>
@@ -191,11 +195,12 @@
             i++;
           }
           document.getElementById("a4").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
     <!-- Pengulangan Do/While -->
-    <h2># Pengulangan Do/While</h2>
+    <h2 id="bag5"><a href="#">#</a> Pengulangan Do.. While..</h2>
     <p>Metode pengulangan <b>Do/while</b> secara pemrosesan skrip kebalikan dari <b>While</b>. Metode pengulangan ini
       akan mengeksekusi blok kode terlebih dahulu, kemudian akan mengulangnya secara repetitif selama kondisi yang
       ditentukan benar.</p>
@@ -226,9 +231,15 @@
           while (i < 3);
 
           document.getElementById("a5").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
         }
       </script>
     </code></pre>
+  </div>
+  <div id="footer">
+    <p class="credits">Diketikan dengan <span class="love">🥰</span> oleh <a
+        href="https://www.linkedin.com/in/susilowidakdo" target="blank">Susilo
+        Linkedin</a></p>
   </div>
 </body>
 

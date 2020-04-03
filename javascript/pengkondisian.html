@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Pengulangan Pada JavaScript</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NJWC537');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWC537" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="content">
+    <!-- Pernyataan Pengkondisian -->
+    <h1>Pernyataan Pengkondisian (If.. else.. dan else.. if..)</h1>
+    <p>Pernyataan pengkondisian digunakan untuk melakukan pengambilan keputusan antara dua kondisi seperti benar atau
+      salah.<br>Hal ini berguna ketika Kita ingin mendapatkan dua hasil yang berbeda dengan melakukan satu kondisi yang
+      dinyatakan dalam bentuk keputusan benar atau salah.<br>Untuk melakukan pernyataan pengkondisian Kita dapat
+      menggunakan beberapa pernyataan berikut:</p>
+    <ul>
+      <li><a href="#bag1"><b>If..</b></a></li>
+      <li><a href="#bag2"><b>If.. Else..</b></a></li>
+      <li><a href="#bag3"><b>Else If..</b></a></li>
+      <li><a href="#bag4"><b>Switch..</b></a></li>
+    </ul>
+    <!-- Pengkondisian If.. -->
+    <h2 id="bag1"><a href="#">#</a> Pengkondisian If..</h2>
+    <p>Pengkondisian <b>If</b> digunakan untuk mengeksekusi kode blok dengan kondisi yang benar.</p>
+    <p>Syntax untuk melakukan pengkondisian <b>If</b></p>
+    <pre><code>
+      <span style="font-style: italic;">if ( kondisi ) {
+      //  blok kode akan dieksekusi ketika kondisi benar.
+    }</span>
+    </code></pre>
+    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode akan di eksekusi.</p>
+    <p>Berikut contoh penggunaan pengkondisian <b>If</b> dengan kondisi jika nilai "x" lebih kecil atau sama dengan 5,
+      maka
+      hasilnya "benar".</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Kondisi</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(x <= 5)</td> <td>Benar</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Masukan nilai x : <input type="text" name="txt1" id="txt1" size="3"> </p>
+    <p><span id="a1" style="color: blue;">[ ? ]</span></p>
+    <button type="button" onclick="conSatu()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengkondisian If.. */
+        function conSatu() {
+          var x = document.getElementById("txt1").value;
+          var text = "";
+
+          if (x <= 5) {
+            text += "[ Benar ]";
+          }
+
+          document.getElementById("a1").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+    <!-- Pengkondisian If.. Else.. -->
+    <h2 id="bag2"><a href="#">#</a> Pengkondisian If.. Else..</h2>
+    <p>Pengkondisian <b>If.. Else..</b> digunakan untuk mengeksekusi dua blok kode dengan kondisi benar atau salah.</p>
+    <p>Syntax untuk melakukan pengkondisian <b>If.. Else..</b></p>
+    <pre><code>
+      <span style="font-style: italic;"></span>if ( kondisi ) {
+      //  blok kode pertama akan dieksekusi ketika kondisi benar.
+    } else {
+      //  blok kode kedua akan dieksekusi ketika kondisi salah.
+    }</span></code></pre>
+    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode pertama akan di eksekusi, jika salah maka blok kode
+      kedua akan di eksekusi.</p>
+    <p>Berikut contoh penggunaan pengkondisian <b>If.. Else..</b> dengan satu kondisi:<br>
+      Blok kode I: Jika nilai "x" lebih kecil atau sama dengan 5, maka hasilnya "Benar". Jika nilai "x" lebih besar
+      dari 5, maka hasilnya "Salah".<br></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Kondisi</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(x <= 5)</td> <td>Benar</td>
+        </tr>
+        <tr>
+          <td>(x > 5)</td>
+          <td>Salah</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Masukan nilai x : <input type="text" name="txt2" id="txt2" size="3"> </p>
+    <p><span id="b1" style="color: goldenrod;">[ ? ]</span></p>
+    <button type="button" onclick="conDua()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengkondisian If.. */
+        function conDua() {
+          var x = document.getElementById("txt2").value;
+          var text = "";
+
+          if (x <= 5) {
+            text += "[ Benar ]";
+          } else {
+            text += "[ Salah ]";
+          }
+
+          document.getElementById("b1").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+    <!-- Pengkondisian Else If.. -->
+    <h2 id="bag3"><a href="#">#</a> Pengkondisian Else If..</h2>
+    <P>Pengkondisian <b>Else If..</b> digunakan untuk melakukan kondisi baru, jika kondisi yang pertama salah.</P>
+    <p>Syntax untuk melakukan pengkondisian <b>Else If..</b></p>
+    <pre><code>
+    <span style="font-style: italic;">if ( kondisi pertama ) {
+      //  blok kode pertama akan dieksekusi ketika kondisi pertama benar.
+    } else if ( kondisi kedua ) {
+      //  blok kode kedua akan dieksekusi ketika kondisi pertama salah dan kondisi kedua benar.
+    } else {
+      //  blok kode ketiga akan dieksekusi ketika kondisi pertama salah dan kondisi kedua salah.
+    }</span></code></pre>
+    <p>Keterangan: Jika pernyataan kondisi pertama benar, maka blok kode pertama akan di eksekusi terlebih dahulu, jika
+      salah maka kondisi kedua akan di eksekusi, jika kondisi kedua benar maka blok kode kedua akan di eksekusi, jika
+      kondisi pertama dan kedua salah maka blok kode ketiga akan di eksekusi.</p>
+    <p>Berikut contoh penggunaan pengkondisian <b>Else If..</b> dengan dua kondisi: <br>
+      Kondisi I: Jika nilai "x" lebih kecil atau sama dengan 5, maka hasilnya "Benar". Jika kondisi pertama salah, maka
+      eksekusi
+      kondisi dua. <br>
+      Kondisi II: Jika nilai "x" sama dengan "5", maka hasilnya "Benar". Jika nilai "x" tidak sama dengan 5, maka
+      hasilnya "Salah".</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Kondisi</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(x <= 5)</td> <td>Benar</td>
+        </tr>
+        <tr>
+          <td>(x == 8)</td>
+          <td>Benar</td>
+        </tr>
+        <tr>
+          <td>(x <> 5)</td>
+          <td>Salah</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Masukan nilai x : <input type="text" name="txt3" id="txt3" size="3"> </p>
+    <p><span id="c1" style="color: #977a31;">[ ? ]</span></p>
+    <button type="button" onclick="conTiga()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengkondisian Else If.. */
+        function conTiga() {
+          var x = document.getElementById("txt3").value;
+          var text = "";
+
+          if (x <= 5) {
+            text += "[ Benar ]";
+          } else if (x == 8) {
+            text += "[ Benar ]";
+          } else {
+            text += "[ Salah ]";
+          }
+
+          document.getElementById("c1").innerHTML = text;
+          console.log(text); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+    <!-- Pengkondisian Switch -->
+    <h2 id="bag4"><a href="#">#</a> Pengkondisian Switch..</h2>
+    <p>Pengkondisian <b>Switch..</b> digunakan untuk melakukan tindakan yang berbeda berdasarkan pada kondisi yang
+      berbeda.</p>
+    <p>Syntax untuk melakukan pengkondisian <b>Switch..</b></p>
+    <pre><code>
+    <span style="font-style: italic;">switch( kondisi ) {
+      case x:
+        // blok kode yang akan di eksekusi
+      break;
+      case y:
+        // blok kode yang akan di eksekusi
+      break;
+      default:
+        // blok kode yang akan di eksekusi
+    }</span></code></pre>
+    <p>Keterangan:</p>
+    <ul>
+      <li>Pengkondisian <b>Switch..</b> akan di evaluasi</li>
+      <li>Kemudian hasilnya akan dibandingkan pada setiap kasus yang ada di bawahnya</li>
+      <li>Jika ada yang cocok, maka blok kode akan di eksekusi</li>
+    </ul>
+    <p>Berikut contoh penggunaan pengkondisian <b>Switch..</b> tabel penilaian: <br>
+      Case I: Jika nilai "x" lebih besar atau sama dengan 80 ,atau lebih kecil atau sama dengan 100, maka hasilnya
+      "Baik".<br>
+      Case II: Jika nilai "x" lebih besar atau sama dengan 60 ,atau lebih kecil atau sama dengan 79, maka hasilnya
+      "Cukup"<br>
+      Case III: Jika nilai "x" lebih besar atau sama dengan 0 ,atau lebih kecil atau sama dengan 59, maka hasilnya
+      "Kurang".</p>
+    <table>
+      <thead>
+        <th>Case</th>
+        <th>Hasil</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>80 ~ 100</td>
+          <td>Baik</td>
+        </tr>
+        <tr>
+          <td>60 ~ 79</td>
+          <td>Cukup</td>
+        </tr>
+        <tr>
+          <td>0 ~ 59</td>
+          <td>Kurang</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Masukan nilai x : <input type="text" name="txt4" id="txt4" size="3"> </p>
+    <p><span id="d1" style="color: #395aeb;">[ ? ]</span></p>
+    <button type="button" onclick="conEmpat()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pengkondisian Else If.. */
+        function conEmpat() {
+          var x = document.getElementById("txt4").value;
+          var nilai;
+
+          switch (true) {
+            case x >= 80 && x <= 100:
+              nilai = "[ Baik ]";
+              break;
+            case x >= 60 && x <= 79:
+              nilai = "[ Cukup ]";
+              break;
+            case x >= 0 && x <= 59:
+              nilai = "[ Kurang ]";
+              break;
+            default:
+              nilai = "Masukan nilai antara 0 ~ 100"
+          }
+
+          document.getElementById("d1").innerHTML = nilai;
+          console.log(nilai); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+  </div>
+  <div id="footer">
+    <p class="credits">Diketikan dengan <span class="love">🥰</span> oleh <a
+        href="https://www.linkedin.com/in/susilowidakdo" target="blank">Susilo
+        Linkedin</a></p>
+  </div>
+</body>
+
+</html>
