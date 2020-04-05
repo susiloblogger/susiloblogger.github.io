@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan Fungsi Pada JavaScript</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NJWC537');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWC537" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="content">
+    <!-- Fungsi -->
+    <h1><a href="/">Beranda</a> / Fungsi (Function)</h1>
+    <p>Fungsi adalah blok kode khusus yang dibuat untuk melakukan tugas tertentu.</p>
+    <!-- Pernyataan Function -->
+    <h2 id="bag1"><a href="#">#</a> Pernyataan Function</h2>
+    <p>Fungsi didefinisikan dengan pernyataan fungsi, diikuti oleh nama fungsi, kemudian tanda kurung (), berikut
+      beberapa hal untuk membuat suatu <b>Function</b>:</p>
+    <ul>
+      <li>Nama fungsi dapat berupa huruf, angka, garis bawah, dan tanda dolar (aturang penulisan nama fungsi sama dengan
+        variabel).</li>
+      <li>Tanda kurung dapat menyertakan nama parameter yang dipisahkan dengan koma (param1, param2, ...).</li>
+      <li>Blok kode yang akan dieksekusi berada dalam kurung kurawal {}</li>
+    </ul>
+    <p>Syntax untuk membuat suatu <b>Function</b> pada javascript:</p>
+    <pre><code><span style="font-style: italic;">function name(param1, param2, param3) {
+      // code to be executed
+    }</span></code></pre>
+    <p>Sebuah <b>Function</b> dapat dieksekusi ketika:</p>
+    <ul>
+      <li>Terjadi suatu aktifitas seperti menekan tombol.</li>
+      <li>Ada perintah untuk memanggil fungsi menggunakan javascript.</li>
+      <li>Berjalan secara otomatis.</li>
+    </ul>
+    <p>Berikut contoh penggunaan <b>Function</b> untuk melakukan pengkalian dari variabel dua bilangan.</p>
+    <p>( var bil1 x var bil2 )</p>
+    <p>Masukan nilai variabel x: <input type="text" id="txt1" size="3"></p>
+    <p>Masukan nilai variabel y: <input type="text" id="txt2" size="3"></p>
+    <p>Hasilnya: <span id="a1" style="color: chocolate;">[ ? ]</span></p>
+    <button type="button" onclick="kali()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Pernyataan Fungsi */
+        function kali() {
+        var bil1 = document.getElementById("txt1").value;
+        var bil2 = document.getElementById("txt2").value;
+
+        document.getElementById("a1").innerHTML = "[ " + bil1 * bil2 + " ]";
+        console.log(); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+    <!-- Fungsi Return -->
+    <h2 id="bag2"><a href="#">#</a> Fungsi Return</h2>
+    <p>Ketika suatu baris skrip diberikan perintah <b>Return</b>, maka fungsi tersebut akan berhenti dieksekusi</p>
+    <p>Jika suatu <b>Function</b> dipanggil dan di dalamnya perintah <b>Return</b>, maka blok kode akan dieksekusi
+      setelah <b>Function</b> tersebut.</p>
+    <p>Berikut contoh penggunaan perintah <b>Return</b> dalam sebuah <b>Function</b> pembagian dua bilangan.</p>
+    <p>Masukan nilai variabel x: <input type="text" id="txt3" size="3"></p>
+    <p>Masukan nilai variabel y: <input type="text" id="txt4" size="3"></p>
+    <p><span id="b1" style="color: darkgoldenrod;">[ ? ]</span></p>
+    <button type="button" onclick="bagi()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Fungsi Return */
+        function bagi() {
+        var bil1 = document.getElementById("txt3").value;
+        var bil2 = document.getElementById("txt4").value;
+
+        return document.getElementById("b1").innerHTML = "[ " + bil1 / bil2 + " ]" ;
+        console.log(); /* Lihat di tab console */
+        }
+      </script>
+    </code></pre>
+    <!-- Kenapa Menggunakan Function? -->
+    <h2 id="bag3"><a href="#">#</a> Kenapa Menggunakan Function?</h2>
+    <p>Alasan mengapa perlu menggunakan <b>Function</b> dalam sebuah pemrograman:</p>
+    <ul>
+      <li>Kita tidak perlu repot menuliskan blok kode yang sama berkali-kali, karena dengan membuat sebuah fungsi kita
+        dapat menggunakan blok kode yang ada di dalamnya berkali-kali.</li>
+      <li>Kita dapat menggunakan blok kode yang sama berkali-kali, tetapi dengan argumen yang berbeda untuk hasil yang
+        berbeda juga.</li>
+    </ul>
+    <p>Contoh perhitungan konversi suhu dari farenheit ke celsius.</p>
+    <p>Suhu farenheit = 77 <sup>o</sup> F --> <span id="c1" style="color: blue;"></span> <sup>o</sup> C </p>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Kenapa Menggunakan Function? */
+        function suhu(farenheit) {          
+          return (5/9) * (farenheit-32);
+        }
+
+        document.getElementById("c1").innerHTML = suhu(77);
+      </script>
+    </code></pre>
+    <!-- Tanda Kurung "(..)" Bagian Dari Fungsi -->
+    <h2 id="bag4"><a href="#">#</a> Tanda Kurung "(..)" Bagian Dari Fungsi</h2>
+    <p>Pemanggilan sebuah fungsi tanpa menggunakan tanda kurung "(..)", maka blok kode akan ditampilkan sebagai objek.
+    </p>
+    <p>Contoh, masih menggunakan kode yang sama seperti di atas, tetapi untuk memanggil fungsi tidak menggunakan tanda
+      kurung.</p>
+    <p>Suhu farenheit = 77 <sup>o</sup> F --> <span id="d1" style="color: blue;"></span> <sup>o</sup> C </p>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Tanda Kurung "(..)" Bagian Dari Fungsi */
+        function suhu(farenheit) {          
+          return (5/9) * (farenheit-32);
+        }
+        
+        document.getElementById("d1").innerHTML = suhu; /* Pemanggilan fungsi tanpa tanda kurung */
+      </script>
+    </code></pre>
+    <!-- Fungsi Digunakan Sebagai Nilai Variabel -->
+    <h2 id="bag5"><a href="#">#</a> Fungsi Digunakan Sebagai Nilai Variabel</h2>
+    <p>Fungsi dapat digunakan dengan cara yang sama seperti menggunakan variabel, di semua jenis rumus, perintah, dan
+      perhitungan.</p>
+    <p>Suhu farenheit = 77 <sup>o</sup> F --> <span id="e1" style="color: blue;"></span> <sup>o</sup> C </p>
+    <p>Masukan suhu farenheit: <input type="text" id="txt5" size="3"> <sup>o</sup> F</p>
+    <p><span id="e2" style="color: darkgoldenrod;">[ ? ]</span> <sup>o</sup> C</p>
+    <button type="button" onclick="hitung()">Klik Saya</button>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Fungsi Digunakan Sebagai Nilai Variabel */
+        var x = suhu(77);
+        var text = x ;
+
+        function suhu(farenheit) {
+          return (5/9) * (farenheit-32);
+        }
+
+        document.getElementById("e1").innerHTML = text;
+
+        function hitung() {
+        var farenheit = document.getElementById("txt5").value;
+        
+        document.getElementById("e2").innerHTML = suhu(farenheit).toFixed(1);
+        }
+      </script>
+    </code></pre>
+    <!-- Fungsi Sebagai Variabel Lokal -->
+    <h2 id="bag6"><a href="#">#</a> Fungsi Sebagai Variabel Lokal</h2>
+    <p>Sebuah fungsi juga bisa menjadi variabel lokal, tapi hanya dapat digunakan ketika variabel tersebut berada di
+      dalam sebuah fungsi.</p>
+    <p><span id="f1" style="color: darkmagenta;"></span></p>
+    <p><span id="f2" style="color: darkolivegreen;"></span></p>
+    <p>Contoh skrip kode:</p>
+    <pre><code>
+      <p>Silahkan inspect blok ini untuk melihat skrip kodenya</p>
+      <script>
+        /* Fungsi Digunakan Sebagai Nilai Variabel */
+        brandMobil();
+
+        function brandMobil() {
+          var merekMobil = "Toyota";
+          document.getElementById("f1").innerHTML =
+          typeof merekMobil + " " + merekMobil;
+        }
+
+        document.getElementById("f2").innerHTML =
+        typeof merekMobil;
+      </script>
+    </code></pre>
+    <p>Karena variabel lokal hanya dapat di akses ketika berada di dalam fungsi, maka variabel dengan nama yang sama
+      dapat dipergunakan di fungsi yang berbeda. <br> Variabel lokal dapat digunakan ketika fungsi berproses, dan tidak
+      akan
+      digunakan lagi ketika proses fungsi tersebut selesai dijalankan</p>
+  </div>
+  <div id="footer">
+    <p class="credits">Diketikan dengan <span class="love">🥰</span> oleh <a
+        href="https://www.linkedin.com/in/susilowidakdo" target="blank">Susilo
+        Linkedin</a></p>
+  </div>
+</body>
+
+</html>

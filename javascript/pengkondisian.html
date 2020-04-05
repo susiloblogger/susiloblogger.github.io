@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pengenalan Pengulangan Pada JavaScript</title>
+  <title>Pengenalan Pengkondisian Pada JavaScript</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway&family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <!-- Google Tag Manager -->
@@ -33,8 +33,8 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="content">
-    <!-- Pernyataan Pengkondisian -->
-    <h1>Pernyataan Pengkondisian (If.. else.. dan else.. if..)</h1>
+    <!-- Pengkondisian -->
+    <h1><a href="/">Beranda</a> / Pengkondisian (If.. else.. dan else.. if..)</h1>
     <p>Pernyataan pengkondisian digunakan untuk melakukan pengambilan keputusan antara dua kondisi seperti benar atau
       salah.<br>Hal ini berguna ketika Kita ingin mendapatkan dua hasil yang berbeda dengan melakukan satu kondisi yang
       dinyatakan dalam bentuk keputusan benar atau salah.<br>Untuk melakukan pernyataan pengkondisian Kita dapat
@@ -54,7 +54,7 @@
       //  blok kode akan dieksekusi ketika kondisi benar.
     }</span>
     </code></pre>
-    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode akan di eksekusi.</p>
+    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode akan dieksekusi.</p>
     <p>Berikut contoh penggunaan pengkondisian <b>If</b> dengan kondisi jika nilai "x" lebih kecil atau sama dengan 5,
       maka
       hasilnya "benar".</p>
@@ -102,8 +102,8 @@
     } else {
       //  blok kode kedua akan dieksekusi ketika kondisi salah.
     }</span></code></pre>
-    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode pertama akan di eksekusi, jika salah maka blok kode
-      kedua akan di eksekusi.</p>
+    <p>Keterangan: Jika pernyataan kondisi benar, maka blok kode pertama akan dieksekusi, jika salah maka blok kode
+      kedua akan dieksekusi.</p>
     <p>Berikut contoh penggunaan pengkondisian <b>If.. Else..</b> dengan satu kondisi:<br>
       Blok kode I: Jika nilai "x" lebih kecil atau sama dengan 5, maka hasilnya "Benar". Jika nilai "x" lebih besar
       dari 5, maka hasilnya "Salah".<br></p>
@@ -159,9 +159,9 @@
     } else {
       //  blok kode ketiga akan dieksekusi ketika kondisi pertama salah dan kondisi kedua salah.
     }</span></code></pre>
-    <p>Keterangan: Jika pernyataan kondisi pertama benar, maka blok kode pertama akan di eksekusi terlebih dahulu, jika
-      salah maka kondisi kedua akan di eksekusi, jika kondisi kedua benar maka blok kode kedua akan di eksekusi, jika
-      kondisi pertama dan kedua salah maka blok kode ketiga akan di eksekusi.</p>
+    <p>Keterangan: Jika pernyataan kondisi pertama benar, maka blok kode pertama akan dieksekusi terlebih dahulu, jika
+      salah maka kondisi kedua akan dieksekusi, jika kondisi kedua benar maka blok kode kedua akan dieksekusi, jika
+      kondisi pertama dan kedua salah maka blok kode ketiga akan dieksekusi.</p>
     <p>Berikut contoh penggunaan pengkondisian <b>Else If..</b> dengan dua kondisi: <br>
       Kondisi I: Jika nilai "x" lebih kecil atau sama dengan 5, maka hasilnya "Benar". Jika kondisi pertama salah, maka
       eksekusi
@@ -184,7 +184,7 @@
           <td>Benar</td>
         </tr>
         <tr>
-          <td>(x <> 5)</td>
+          <td>(x <> 8)</td>
           <td>Salah</td>
         </tr>
       </tbody>
@@ -222,26 +222,26 @@
     <pre><code>
     <span style="font-style: italic;">switch( kondisi ) {
       case x:
-        // blok kode yang akan di eksekusi
+        // blok kode yang akan dieksekusi
       break;
       case y:
-        // blok kode yang akan di eksekusi
+        // blok kode yang akan dieksekusi
       break;
       default:
-        // blok kode yang akan di eksekusi
+        // blok kode yang akan dieksekusi
     }</span></code></pre>
     <p>Keterangan:</p>
     <ul>
       <li>Pengkondisian <b>Switch..</b> akan di evaluasi</li>
       <li>Kemudian hasilnya akan dibandingkan pada setiap kasus yang ada di bawahnya</li>
-      <li>Jika ada yang cocok, maka blok kode akan di eksekusi</li>
+      <li>Jika ada yang cocok, maka blok kode akan dieksekusi</li>
     </ul>
     <p>Berikut contoh penggunaan pengkondisian <b>Switch..</b> tabel penilaian: <br>
-      Case I: Jika nilai "x" lebih besar atau sama dengan 80 ,atau lebih kecil atau sama dengan 100, maka hasilnya
+      Case I: Jika nilai "x" lebih besar atau sama dengan 80 ,dan lebih kecil atau sama dengan 100, maka hasilnya
       "Baik".<br>
-      Case II: Jika nilai "x" lebih besar atau sama dengan 60 ,atau lebih kecil atau sama dengan 79, maka hasilnya
+      Case II: Jika nilai "x" lebih besar atau sama dengan 60 ,dan lebih kecil atau sama dengan 79, maka hasilnya
       "Cukup"<br>
-      Case III: Jika nilai "x" lebih besar atau sama dengan 0 ,atau lebih kecil atau sama dengan 59, maka hasilnya
+      Case III: Jika nilai "x" lebih besar atau sama dengan 0 ,dan lebih kecil atau sama dengan 59, maka hasilnya
       "Kurang".</p>
     <table>
       <thead>
